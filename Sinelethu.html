@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Lethu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #c71585;
+      font-size: 1.8em;
+      text-align: center;
+      padding-top: 50px;
+      overflow-x: hidden;
+    }
+
+    .fade-in {
+      animation: fadeInBody 2.5s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in-1, .fade-in-2, .fade-in-3, .fade-in-4 {
+      opacity: 0;
+      animation: fadeInBody 2.5s ease-in-out forwards;
+    }
+
+    .fade-in-2 { animation-delay: 1s; }
+    .fade-in-3 { animation-delay: 2s; }
+    .fade-in-4 { animation-delay: 3s; }
+
+    .flowers {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('romantic background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.15;
+      z-index: -1;
+      animation: pulseGlow 10s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0% { opacity: 0.15; }
+      50% { opacity: 0.25; }
+      100% { opacity: 0.15; }
+    }
+
+    .message {
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: auto;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    #poem {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #800040;
+      padding: 20px;
+      background-color: #fffafc;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    audio {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <div class="flowers"></div>
+
+  <div class="message fade-in-1">I love you Lethu 💖</div>
+
+  <div class="gallery fade-in-2">
+    <img src="images/Lethu 1.jpg" alt="Lethu smiling warmly">
+    <img src="images/Lethu33.jpg" alt="Lethu surrounded by flowers">
+    <img src="images/Lethu 2.jpg" alt="A special moment with Lethu">
+  </div>
+
+  <button class="fade-in-3" onclick="document.getElementById('poem').style.display='block'">Reveal My Poem</button>
+
+  <div id="poem" class="fade-in-4">
+    <p>From the moment you entered my life,<br>
+    everything shifted—quietly, profoundly.</p>
+
+    <p>You’ve been a blessing wrapped in grace,<br>
+    a light that softens my hardest days,<br>
+    a voice that steadies me when the world feels loud.</p>
+
+    <p>I adore you—not just for your beauty,<br>
+    but for your kindness, your laughter,<br>
+    your ability to make the ordinary feel magical.</p>
+
+    <p>You’ve taught me patience, reminded me of joy,<br>
+    and shown me what it means to be truly seen.</p>
+
+    <p>I love you, Lethu—deeply, endlessly,<br>
+    and I thank the universe for the gift of you.</p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="music/Samthing-Soweto-Deda.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
